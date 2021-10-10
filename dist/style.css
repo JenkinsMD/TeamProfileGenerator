@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: rgb(247, 239, 231);
+   
+}
+
+.banner {
+    height: 15vh;
+    background-color: rgb(245, 57, 10);
+    text-align: center;
+    font-size: 7vh;
+    color: rgb(252, 252, 252);
+    margin-bottom: 10px;
+}
+
+h3 {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+
+ul {
+    width: 100%;
+    background-color: bisque;
+}
+
+ul li{
+    
+    /* margin: 5px; */
+    background-color: bisque;
+    width: 100%;
+    list-style: none;
+}
+/*Container for the main project*/
+.cardHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    /* background-color: bisque; */
+  
+    flex-basis: 100%;
+    width: 100vw;
+    /* height: 200px;  */
+
+}
+
+/*Containter for smaller projects*/
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    ;
+    border: solid 5px rgb(16, 16, 17);
+    
+    background-color: bisque;
+    /* flex-basis: 40%; */
+    /* margin: 10px 5%; */
+    
+    height: 200px;
+    width: 240px;
+   
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+
+
+
