@@ -5,6 +5,9 @@ const util = require('util');
 
 const createCard = require('./lib/createCard');
 const generateHTML = require('./lib/generateHTML');
+const Intern = require('./lib/Intern');
+const Engineer = require('./lib/Engineer');
+const Manager = require('./lib/Manager');
 
 //Variables
 let midString ="";
@@ -35,8 +38,10 @@ const promptUser = async () => {
       message: 'Enter the OFFICE NUMBER of the team manager',
     },
   ]);
-  // console.log(promptTemp)
-  return await createCard.createManager(promptTemp)
+  console.log(promptTemp)
+  const manInfo = new Manager(promptTemp.name, promptTemp.id, promptTemp.email, promptTemp.officeNum)
+
+  return await createCard.createManager(manInfo)
 
 };
 
@@ -67,7 +72,7 @@ const secondPrompt = async (midString) =>{
       midString = ogVal.concat(holder);
       console.log("in Do:"+ midString)
     }
-    // return false;
+
     // return false;
   }while(status != false);
   } ;
@@ -114,7 +119,9 @@ async function switchCheck(casePass) {
         },
        
       ]);
-      let tempEng = createCard.createEngineer(engCase)
+      const engInfo = new Engineer(engCase.name, engCase.id, engCase.email, engCase.github)
+
+      let tempEng = createCard.createEngineer(engInfo)
       
       return tempEng
     break;
@@ -144,8 +151,9 @@ async function switchCheck(casePass) {
         },
        
       ]);
+      const intInfo = new Intern(intCase.name, intCase.id, intCase.email, intCase.school)
 
-      let tempInt = createCard.createIntern(intCase)
+      let tempInt = createCard.createIntern(intInfo)
       return tempInt
 
     break;
