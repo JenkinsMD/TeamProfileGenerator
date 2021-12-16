@@ -4,7 +4,7 @@ describe('Manager Tests', () => {
   
   const testManager = new Manager("Bob", 1, "bob@bob.com", 200)
 
-  it('Creates Engineer object', () => {
+  it('Creates Manager object', () => {
     expect(testManager).toEqual({ name: "Bob", id: 1, email: "bob@bob.com", officeNum: 200 });
   });
 

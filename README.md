@@ -46,4 +46,4 @@ https://jenkinsmd.github.io/TeamProfileGenerator/
 
 The following video shows the web application's appearance and functionality:
 
-[WIP]
+https://youtu.be/xbhpPG6iuI8

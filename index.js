@@ -38,9 +38,9 @@ const promptUser = async () => {
       message: 'Enter the OFFICE NUMBER of the team manager',
     },
   ]);
-  console.log(promptTemp)
+  
   const manInfo = new Manager(promptTemp.name, promptTemp.id, promptTemp.email, promptTemp.officeNum)
-
+  
   return await createCard.createManager(manInfo)
 
 };
@@ -50,7 +50,7 @@ const secondPrompt = async (midString) =>{
   let status ='';
   do{
     let temp = [];
-    // var cardHolder = document.querySelector(".cardHolder");
+
     temp = await inquirer.prompt([
       {
         type: 'list',
@@ -62,7 +62,7 @@ const secondPrompt = async (midString) =>{
       
      
     ]);
-    console.log(temp)
+ 
     status = await switchCheck(temp.employeeType)
     if (status===false) {
       return midString;
@@ -70,7 +70,7 @@ const secondPrompt = async (midString) =>{
       let ogVal =midString
       let holder = status;
       midString = ogVal.concat(holder);
-      console.log("in Do:"+ midString)
+     
     }
 
     // return false;
@@ -95,7 +95,7 @@ init();
 async function switchCheck(casePass) {
   switch(casePass){
     case 'Engineer':
-      console.log("Engineer x")
+     
       let engCase = await inquirer.prompt([
         {
           type: 'input',
@@ -127,7 +127,7 @@ async function switchCheck(casePass) {
     break;
 
     case 'Intern':
-      console.log("intern x")
+     
       let intCase = await inquirer.prompt([
         {
           type: 'input',
@@ -159,7 +159,7 @@ async function switchCheck(casePass) {
     break;
 
     default:
-      console.log("nah")
+      
       return false
   }
 
